@@ -1,17 +1,21 @@
 <template>
-  <input type="file" @change="onFileChange" accept="image/*" />
+  <div>
+    <input type="file" @change="onFileChange" accept=".dcm,image/dicom" />
+    <p>Only .dcm, image/dicom</p>
+  </div>
 </template>
 
 <script setup lang="ts">
 
-  const emit = defineEmits(['image-uploaded']);
-  const imgUrl: Ref<null | string> = ref(null);
+const emit = defineEmits<{
+  (e: 'image-uploaded', file: File): void;
+}>();
 
-  const onFileChange = (event: any) => {
-    const file = event.target.files[0];
-    if (file) {
-      imgUrl.value = URL.createObjectURL(file);
-      emit('image-uploaded', imgUrl.value);
-    }
-  };
+const onFileChange = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  const file = target.files?.[0];
+  if (file) {
+    emit('image-uploaded', file);
+  }
+};
 </script>

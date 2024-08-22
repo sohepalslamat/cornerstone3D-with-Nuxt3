@@ -10,9 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@cornerstonejs/streaming-image-volume-loader": "^1.84.1",
-    "cornerstone-core": "^2.6.1",
-    "cornerstone-tools": "^6.0.10",
+    "@cornerstonejs/core": "^1.84.1",
+    "@cornerstonejs/dicom-image-loader": "^1.84.1",
+    "@cornerstonejs/tools": "^1.84.1",
+    "dicom-parser": "^1.8.21",
     "nuxt": "^3.12.4",
     "vue": "latest"
   }

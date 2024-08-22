@@ -1,3 +1,8 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <NuxtPage />
+  <ClientOnly>
+    <NuxtPage />
+  </ClientOnly>
 </template>
