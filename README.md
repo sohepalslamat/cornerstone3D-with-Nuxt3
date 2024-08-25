@@ -20,7 +20,7 @@ This repository showcases an integration of Cornerstone3D, a powerful 3D visuali
 
 **Getting Started:**
 
-1. Clone the repository: `git clone https://github.com/yourusername/cornerstone3D-with-Nuxt3.git`
+1. Clone the repository: `git clone https://github.com/sohepalslamat/cornerstone3D-with-Nuxt3`
 2. Navigate to the project directory: `cd cornerstone3D-with-Nuxt3`
 3. Setup:
 
